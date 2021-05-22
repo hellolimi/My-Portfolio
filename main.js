@@ -1,3 +1,14 @@
+/* gnb */
+const section = document.querySelectorAll('.section');
+const mainBtn = document.querySelectorAll('header .mainNav');
+for(var i=0;i<4;i++){
+    let thisSection = section[i];
+    mainBtn[i].addEventListener("click", e => {
+        e.preventDefault();
+        thisSection.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+    });
+}
+
 /* gnb - panel */
 const windowWidth = window.innerWidth;
 const activatePanel = () => {
@@ -73,13 +84,12 @@ window.onload = () => {
     setTimeout(()=>{
         const loader = document.querySelector('.loader');
         loader.style.display = 'none';
-    }, 800);
+    }, 400);
     typing();
 };
 
 /* projects navigation */
 const list = document.querySelectorAll('#projects .project');
-const projects = document.getElementById('projects');
 const proMenu = document.querySelectorAll('#projects .proMenu');
 
 for(var i=0;i<5;i++){
