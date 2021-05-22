@@ -13,54 +13,66 @@
         <link rel="stylesheet" href="main.css" />
     </head>
     <body>
+        <div class="loader">
+            <h1>
+                <span>L</span>
+                <span>I</span>
+                <span>M</span>
+                <span>K</span>
+                <span>I</span>
+                <span>M</span>
+            </h1>
+        </div>
         <header>
             <div class="wrap">
                 <h1><a href="#top" alt="scroll to top">LIMKIM</a></h1>
-                <nav>
-                    <ul class="gnb">
-                        <li><a href="#" class="mainNav">ABOUT ME</a></li>
-                        <li><a href="#" class="mainNav">SKILLS</a></li>
-                        <li><a href="#" class="mainNav">PROJECTS</a></li>
-                        <li><a href="#" class="mainNav">CONTACT</a></li>
+                <nav class="gnb">
+                    <ul>
+                        <li><a href="/#intro" class="mainNav">ABOUT ME</a></li>
+                        <li><a href="/#skills" class="mainNav">SKILLS</a></li>
+                        <li><a href="/#projects" class="mainNav">PROJECTS</a></li>
+                        <li><a href="/#contact" class="mainNav">CONTACT</a></li>
                     </ul>
                 </nav>
+                <div class="panel">
+                    <a href="#panel">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
             </div>
         </header>
         <div id="main">
+            <div class="mainBg"></div>
             <div class="wrap">
-                <h2 class="mainTitle">return LIMKIM.PORTFOLIO();</h2>
-                <p class="mainText"></p>
+                <figure>
+                    <img src="img/contact_img.jpg" alt="프로필 사진" />
+                </figure>
+                <div class="textBox">
+                    <h2 class="mainTitle"><span>retu</span>rn LIMKIM.PORTFOLIO();</h2>
+                    <p class="mainText">&nbsp;</p>
+                </div>
             </div>
-            <script>
-                const text = ' 안녕하세요, 신입 프론트엔드 개발자 김경림입니다!';
-                const mainTitle = document.querySelector('.mainTitle');
-                const mainText = document.querySelector('.mainText');
-                window.onload = () => {
-                    mainTitle.className = 'active';
-                };
-                let num = 0;
-                let typing;
-                setTimeout(()=>{
-                    typing = setInterval(()=>{
-                        num<text.length&&(mainText.textContent += text[num]);
-                        num++;
-                    }, 120);
-                }, 1800);
-                clearInterval(typing);
-            </script>
+            <div class="scroll">
+                <span>Scroll</span><span class="wheel"></span><span>Down</span>
+            </div>
         </div>
         <div id="intro">
             <div class="wrap">
-                <h3>const LIMKIM = new FrontendDeveloper();</h3>
-                <img src="img/PXL_20210503_202319758.MP.jpg"/>
+                <h3>Introdcution</h3>
+                <figure>
+                    <img src="img/intro_edit.jpg" alt="인트로 이미지" class="pc"/>
+                    <img src="img/intro_bn_m.png" alt="인트로 이미지" class="mobile"/>
+                </figure>
                 <div class="textBox">
-                    <h4>Introdcution</h4>
-                    <p>안녕하세요, 끊임없이 공부하는 똑똑한 신입 개발자 김경림입니다 😍<br>
-                        "UX/UI디자인 웹퍼블리싱 프론트엔드 개발자 양성 과정"이라는 국비지원과정으로 웹 개발 분야에 입문하게 되었습니다.<br>
-                        과정 수료 후 강사님이 진행하는 웹 비즈니스 페이지 개발 프로젝트에 프리랜서로 참여한 경험이 있고,<br>
-                        현재는 JavaScript, React.js 등 국비과정만으로는 충분하지 않다고 느꼈던 언어나 라이브러리를 인터넷 강의를 통해 공부하고 있습니다.<br>
-                        어제는 이해할 수 없었던 코드들이 오늘은 제 머릿속에서, 또 손끝에서 작성되는 것에 일과 중 가장 큰 성취감을 느낍니다.<br>
-                        계속해서 변화하는 웹 개발 분야에서 '끊임 없이' 또 '즐겁게' 공부하는, 미래지향형 프론트엔드 개발자가 되는 것이 저의 목표입니다.<br>
+                    <h4>const LIMKIM = new FrontendDeveloper();</h4>
+                    <p>안녕하세요, 끊임없이 공부하는 똑똑한 신입 개발자 김경림입니다 😍<br><br>
+                        &nbsp;"UX/UI디자인 웹퍼블리싱 프론트엔드 개발자 양성 과정"이라는 국비지원과정으로 웹 개발 분야에 입문하게 되었습니다.
+                        과정 수료 후 웹 비즈니스 페이지 개발 프로젝트에 웹 퍼블리싱 프리랜서로 참여한 경험이 있고,<br class="pc">
+                        &nbsp;현재는 JavaScript, React.js 등 국비과정만으로는 충분하지 않다고 느꼈던 언어나 라이브러리를 인터넷 강의를 통해 공부하고 있습니다.<br><br>
+                        &nbsp;어제는 이해할 수 없었던 코드들이 오늘은 제 머릿속에서, 또 손끝에서 작성되는 것에 일과 중 가장 큰 성취감을 느낍니다.<br><br>
+                        &nbsp;계속해서 변화하는 웹 개발 분야에서 '끊임 없이' 또 '즐겁게' 공부하는,<br class="pc"> 미래지향형 프론트엔드 개발자가 되는 것이 저의 목표입니다.<br><br>
                         🥰 제 포트폴리오를 보기 위해 소중한 시간을 내주셔서 정말 감사합니다.
                     </p>
                 </div>
@@ -107,32 +119,36 @@
             <div class="wrap">
                 <h3>Projects</h3>
                 <ul class="proNav">
-                    <li><a href="#this">lmitter 소셜 미디어 SPA</a></li>
-                    <li><a href="#this">LimChat Real Time 오픈 채팅방</a></li>
-                    <li><a href="#this">BookAnd PC/MOBILE 웹사이트</a></li>
-                    <li><a href="#this">AstellNKern 웹 반응형 메인페이지</a></li>
-                    <li><a href="#this">백미당 PC/MOBILE 웹 메인페이지</a></li>
+                    <li><a href="#this" class="proMenu">lmitter 소셜 미디어 SPA</a></li>
+                    <li><a href="#this" class="proMenu">LimChat Real Time 오픈 채팅방</a></li>
+                    <li><a href="#this" class="proMenu">AstellNKern 웹 반응형 메인페이지</a></li>
+                    <li><a href="#this" class="proMenu">BookAnd PC/MOBILE 웹사이트</a></li>
+                    <li><a href="#this" class="proMenu">백미당 PC/MOBILE 웹 메인페이지</a></li>
                 </ul>
                 <div class="project">
                     <div class="title">
                         <h4>1. lmitter Social Media SPA</h4>
-                        <span class="date">2021. 04. 24 - 2021. 05. 11</span>
+                        <span class="date">2021. 04. 24 - 2021. 05. 15</span>
                     </div>
                     <div class="contents">
-                        <img src="img/pro_bn01.png" alt="" />
+                        <img src="img/pro_bn01.png" alt="lmitter mockup 이미지" />
                         <div class="desc">
                             <h5>lmitter 프로젝트 개요</h5>
-                            <a href="#gitHub">
-                                <img src="img/icon15.png" alt="gitHub 아이콘"/>
-                                <span>GitHub에서 코드 보기</span>
-                            </a>
-                            <p>
-                                <b>React</b> 라이브러리와 <b>Firebase</b>를 기반으로
-                                실시간 lmitte(텍스트/사진 컨텐츠) 공유가 가능한 소셜 미디어를 
-                                구현하고, <b>SCSS</b>를 이용하여 스타일을 더하고 기기별 스크린 폭에 반응하는
-                                Responsive Single Page Application 를 제작하였습니다.
+                            <div class="descTop">
+                                <a href="#gitHub" class="goGithub">
+                                    <img src="img/icon15.png" alt="gitHub 아이콘"/>
+                                    <span>GitHub에서 코드 보기</span>
+                                </a>
+                                <a href="#view" class="goView">PROJECT PREVIEW</a>
+                            </div>
+                            <p class="preview">
+                                <span class="date_m">2021. 04. 24 - 2021. 05. 15</span>
+                               <b>React</b> 라이브러리와 <b>Firebase</b>를 기반으로
+                               실시간 lmitte(텍스트/사진 컨텐츠) 공유가 가능한 소셜 미디어를 
+                               구현하고, <b>SCSS</b>를 이용하여 스타일을 더하고 기기별 스크린 폭에 반응하는
+                               Responsive Single Page Application 를 제작하였습니다.
                             </p>
-                            <a href="#page" class="button">Lmitter 바로가기</a>
+                            <a href="https://hellolimi.github.io/lmitter/#/" target="_blank" class="button">Lmitter 바로가기</a>
                         </div>
                     </div>
                 </div>
@@ -142,20 +158,24 @@
                         <span class="date">2021. 03. 28 - 2021. 04. 08</span>
                     </div>
                     <div class="contents">
-                        <img src="img/pro_bn02.png" alt="" />
+                        <img src="img/pro_bn02.png" alt="LimChat mockup 이미지" />
                         <div class="desc">
                             <h5>LimChat 프로젝트 개요</h5>
-                            <a href="#gitHub">
-                                <img src="img/icon15.png" alt="gitHub 아이콘"/>
-                                <span>GitHub에서 코드 보기</span>
-                            </a>
-                            <p>
+                            <div class="descTop">
+                                <a href="#gitHub" class="goGithub">
+                                    <img src="img/icon15.png" alt="gitHub 아이콘"/>
+                                    <span>GitHub에서 코드 보기</span>
+                                </a>
+                                <a href="#view" class="goView">PROJECT PREVIEW</a>
+                            </div>
+                            <p class="preview">
+                                <span class="date_m">2021. 03. 28 - 2021. 04. 08</span>
                                 <b>node.js</b>을 기반으로 하여 <b>Express.js</b> 프레임워크를 사용해
                                 서버를 구축하였고, <b>socket.io</b>를 이용하여 서버 / 클라이언트 간
                                 데이터를 연결하여 시간으로 채팅이 가능한 반응형 오픈 채팅방을 
                                 제작하였습니다.
                             </p>
-                            <a href="#page" class="button">LimChat 바로가기</a>
+                            <a href="https://limchat.herokuapp.com/" target="_blank" class="button">LimChat 바로가기</a>
                         </div>
                     </div>
                 </div>
@@ -165,20 +185,24 @@
                         <span class="date">2021. 02. 28 - 2021. 03. 08</span>
                     </div>
                     <div class="contents">
-                        <img src="img/pro_bn03.png" alt="" />
+                        <img src="img/pro_bn03.png" alt="ASTELL & KERN mockup 이미지" />
                         <div class="desc">
                             <h5>Astell&Kern 프로젝트 개요</h5>
-                            <a href="#gitHub">
-                                <img src="img/icon15.png" alt="gitHub 아이콘"/>
-                                <span>GitHub에서 코드 보기</span>
-                            </a>
-                            <p>
-                                HTML, CSS와 jQuery/JS를 기반으로 한 인터렉티브 메인 페이지
+                            <div class="descTop">
+                                <a href="#gitHub" class="goGithub">
+                                    <img src="img/icon15.png" alt="gitHub 아이콘"/>
+                                    <span>GitHub에서 코드 보기</span>
+                                </a>
+                                <a href="#view" class="goView">PROJECT PREVIEW</a>
+                            </div>
+                            <p class="preview">
+                                <span class="date_m">2021. 02. 28 - 2021. 03. 08</span>
+                                <b>HTML</b>, <b>CSS</b>와 <b>jQuery/JS</b>를 기반으로 한 인터렉티브 메인 페이지
                                 를 CSS의 미디어 쿼리 키워드를 사용하여 기기별 스크린 폭에 
                                 반응하여 이용자에게 최적의 화면을 제공하는 
                                 웹사이트 메인페이지부분을 제작하였습니다.
                             </p>
-                            <a href="#page" class="button">Astell&Kern 바로가기</a>
+                            <a href="#page" target="_blank" class="button">Astell&Kern 바로가기</a>
                         </div>
                     </div>
                 </div>
@@ -188,22 +212,26 @@
                         <span class="date">2021. 12. 31 - 2021. 02. 15</span>
                     </div>
                     <div class="contents">
-                        <img src="img/pro_bn04.png" alt="" />
+                        <img src="img/pro_bn04.png" alt="BookAnd mockup 이미지" />
                         <div class="desc">
                             <h5>BookAnd 프로젝트 개요</h5>
-                            <a href="#gitHub">
-                                <img src="img/icon15.png" alt="gitHub 아이콘"/>
-                                <span>GitHub에서 코드 보기</span>
-                            </a>
-                            <p>
-                                HTML, CSS, jQuery/JS를 기반으로 하여 메인페이지 외 19개의 
-                                인터랙티브 PC/모바일 웹페이지를 제작하고 JSON 데이터 연동 및 
-                                PHP와 MySQL을 이용하여 회원가입, 게시판, Q&A 등의 
+                            <div class="descTop">
+                                <a href="#gitHub" class="goGithub">
+                                    <img src="img/icon15.png" alt="gitHub 아이콘"/>
+                                    <span>GitHub에서 코드 보기</span>
+                                </a>
+                                <a href="#view" class="goView">PROJECT PREVIEW</a>
+                            </div>
+                            <p class="preview">
+                                <span class="date_m">2021. 12. 31 - 2021. 02. 15</span>
+                                <b>HTML</b>, <b>CSS</b>, <b>jQuery/JS</b>를 기반으로 하여 메인페이지 외 19개의 
+                                인터랙티브 웹페이지를 제작하고 <b>JSON</b> 데이터 연동 및 
+                                <b>PHP</b>와 <b>MySQL</b>을 이용하여 회원가입, 게시판, Q&A 등의 
                                 기능을 구현하였습니다.
                             </p>
                             <div class="buttonBox">
-                                <a href="#page" class="button">PC 사이트 바로가기</a>
-                                <a href="#page" class="button">MOBILE 사이트 바로가기</a>
+                                <a href="http://bookand.dothome.co.kr/" target="_blank" class="button">PC 사이트 바로가기</a>
+                                <a href="http://mbookand.dothome.co.kr/" target="_blank" class="button">MOBILE 사이트 바로가기</a>
                                 <span>* 모바일 기기에서 PC버전으로 접속 시 모바일 페이지로 redirect 됩니다. </span>
                             </div>
                         </div>
@@ -215,20 +243,24 @@
                         <span class="date">2021. 04. 24 - 2021. 05. 11</span>
                     </div>
                     <div class="contents">
-                        <img src="img/pro_bn05.png" alt="" />
+                        <img src="img/pro_bn05.png" alt="Beakmidang mockup 이미지" />
                         <div class="desc">
                             <h5>Beakmidang 프로젝트 개요</h5>
-                            <a href="#gitHub">
-                                <img src="img/icon15.png" alt="gitHub 아이콘"/>
-                                <span>GitHub에서 코드 보기</span>
-                            </a>
-                            <p>
+                            <div class="descTop">
+                                <a href="#gitHub" class="goGithub">
+                                    <img src="img/icon15.png" alt="gitHub 아이콘"/>
+                                    <span>GitHub에서 코드 보기</span>
+                                </a>
+                                <a href="#view" class="goView">PROJECT PREVIEW</a>
+                            </div>
+                            <p class="preview">
+                                <span class="date_m">2021. 04. 24 - 2021. 05. 11</span>
                                 HTML, CSS, jQuery/JS를 기반으로 한 인터렉티브 PC/모바일 
                                 메인 웹페이지를 구현하였습니다.
                             </p>
                             <div class="buttonBox">
-                                <a href="#page" class="button">PC 사이트 바로가기</a>
-                                <a href="#page" class="button">MOBILE 사이트 바로가기</a>
+                                <a href="http://ltbllim.dothome.co.kr/" target="_blank" class="button">PC 사이트 바로가기</a>
+                                <a href="http://mltbllim.dothome.co.kr/" target="_blank" class="button">MOBILE 사이트 바로가기</a>
                                 <span>* 모바일 기기에서 PC버전으로 접속 시 모바일 페이지로 redirect 됩니다. </span>
                             </div>
                         </div>
@@ -236,19 +268,19 @@
                 </div>
                 <div class="moreWorks">
                     <div class="line01">
-                        <a href=""><img src="img/pro_gif01.gif" alt=""/></a>
-                        <a href=""><img src="img/pro_gif02.gif" alt=""/></a>
-                        <a href=""><img src="img/pro_gif03.gif" alt=""/></a>
+                        <a href="https://github.com/hellolimi/JavaScript-Works/tree/master/Lottery_Number_Generator" target="_blank" class="gif"><img src="img/pro_gif01.gif" alt="more work01 gif"/></a>
+                        <a href="https://github.com/hellolimi/ReactJS-Works/tree/master/comments-window" target="_blank" class="gif"><img src="img/pro_gif02.gif" alt="more work02 gif"/></a>
+                        <a href="https://github.com/hellolimi/JavaScript-Works/tree/master/MyClock" target="_blank" class="gif"><img src="img/pro_gif03.gif" alt="more work03 gif"/></a>
                     </div>
                     <div class="line02">
-                        <a href=""><img src="img/pro_gif04.gif" alt=""/></a>
-                        <a href="" class="goGithub" >VIEW MORE WORKS<br> IN<br><img src="img/gitHub_orange.png" /></a>
-                        <a href=""><img src="img/pro_gif05.gif" alt=""/></a>
+                        <a href="https://github.com/hellolimi/JavaScript-Works/tree/master/JoinMe" target="_blank" class="gif"><img src="img/pro_gif04.gif" alt="more work04 gif"/></a>
+                        <a href="https://github.com/hellolimi " class="goGithub" target="_blank" >VIEW MORE WORKS<br> IN<br><img src="img/gitHub_orange.png" alt="gitHub 아이콘"/></a>
+                        <a href="https://github.com/hellolimi/ReactJS-Works/tree/master/todoList_demo" target="_blank" class="gif"><img src="img/pro_gif05.gif" alt="more work05 gif"/></a>
                     </div>
                     <div class="line03">
-                        <a href=""><img src="img/pro_gif06.gif" alt=""/></a>
-                        <a href=""><img src="img/pro_gif07.gif" alt=""/></a>
-                        <a href=""><img src="img/pro_gif08.gif" alt=""/></a>
+                        <a href="https://github.com/hellolimi/ReactJS-Works/tree/master/simple-SPA" target="_blank" class="gif"><img src="img/pro_gif06.gif" alt="more work06 gif"/></a>
+                        <a href="https://github.com/hellolimi/JavaScript-Works/tree/master/MouseMovingBackground" target="_blank" class="gif"><img src="img/pro_gif07.gif" alt="more work06 gif"/></a>
+                        <a href="https://github.com/hellolimi/portfolio_demo" target="_blank" class="gif"><img src="img/pro_gif08.gif" alt="more work07 gif"/></a>
                     </div>
                 </div>
             </div>
@@ -256,14 +288,15 @@
         <div id="contact">
             <div class="wrap">
                 <h3>Contact</h3>
+                <img src="img/main_edit02.jpg" alt="프로필 사진" class="mobile">
                 <ul>
-                    <li>EMAIL <span></span> ltbllim@gmail.com</li>
-                    <li>MOBILE <span></span> 010-2309-9296</li>
-                    <li>ADDRESS <span></span> Seoul, Gwanak-gu</li>
+                    <li><a href="mailto:ltbllim@gmail.com"><span class="title">EMAIL</span> <span class="line"></span> ltbllim@gmail.com</a></li>
+                    <li><a href="tel:010-2309-9296"><span class="title">MOBILE</span> <span class="line"></span> 010-2309-9296</a></li>
+                    <li><span class="title">ADDRESS</span> <span class="line"></span> Seoul, Gwanak-gu</li>
                 </ul>
                 <div class="contact">
-                    <img src="img/profile-picture.png" alt="프로필 사진">
-                    <form>
+                    <img src="img/main_edit02.jpg" alt="프로필 사진" class="pc">
+                    <form id="contactForm" name="contactForm">
                         <label for="name" class="away">name</label>
                         <input id="name" name="name" type="text" placeholder="NAME" />
                         <label for="contact" class="away">contact</label>
@@ -271,8 +304,8 @@
                         <label for="address" class="away">address</label>
                         <input id="address" name="address" type="text" placeholder="ADDRESS" />
                         <label for="message">MESSAGE</label>
-                        <textarea id="message"></textarea>
-                        <button type="submit">SUBMIT</button>
+                        <textarea id="message" name="message"></textarea>
+                        <button type="submit" id="submit">SUBMIT</button>
                     </form>
                 </div>
             </div>
@@ -286,11 +319,13 @@
                 <div class="bottom">
                     <h1>LIMKIM</h1>
                     <p>© 2021 LIMKIM all rights reserved<br>
-                        본 사이트는 포트폴리오 용도로 제작되었으며 상업적 목적이 없음을 밝힙니다.<br>
+                        <span class="mobile_s">본 사이트는 포트폴리오 용도로 제작되었으며 상업적 목적이 없음을 밝힙니다.</span><br>
                         This website has been created for the use of a personal  portfolio.
                     </p>
                 </div>
             </div>
         </footer>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+        <script src="main.js"></script>
     </body>
 </html>
