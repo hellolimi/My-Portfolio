@@ -47,7 +47,7 @@ h3{ font-size:2rem; color:#fff; line-height:3.5rem; font-weight:500;
 /* button */
 @mixin button{
     display:block;
-    width:100%; padding:0.45rem; box-sizing:border-box;
+    width:100%; padding:0.5rem; box-sizing:border-box;
     border:1px solid #FB8B00;
     box-shadow: 0.5rem 0.5rem #FB8B00;
     color:#FB8B00; font-weight:500; font-size:1.5rem;
@@ -59,7 +59,7 @@ h3{ font-size:2rem; color:#fff; line-height:3.5rem; font-weight:500;
 }
 /* main */
 #main{ position:relative; display:flex; width:100%; height:100vh; flex-direction:column; justify-content:center; align-items:center; box-sizing:border-box; 
-    .mainBg{ position:absolute; top:0; left:0; z-index:-10; width:100%; height:50%; background-color:#FB8B00; transform-origin:top center; transform:matrix(1,0.01,0,0.1,0,0); transition:0.6s; transition-delay: 4.6s; }
+    .mainBg{ position:absolute; top:0; left:0; z-index:-10; width:100%; height:50%; background-color:#FB8B00; transform-origin:top center; transform:matrix(1,0.03,0,0.1,0,0); opacity:0; transition:0.6s; transition-delay: 1s; }
     .wrap{ position:relative; box-sizing:border-box;
         figure{ border-radius: 50%; background-color:#FB8B00; box-shadow:0.875rem 0 #FB8B00;
             transform:matrix(0.4,0,-0.1,0.4,80,-80); opacity:0; transition:0.6s; transition-delay: 0.8s; 
@@ -85,7 +85,7 @@ h3{ font-size:2rem; color:#fff; line-height:3.5rem; font-weight:500;
     }
 
     &.active{
-        .mainBg{ transform:matrix(1,0,0,1,0,0); }
+        .mainBg{ transform:matrix(1,0,0,1,0,0); opacity:1; }
         figure{ transform:matrix(1,0,0,1,0,0); opacity:1; }
         .textBox h2{transform:matrix(1,0,0,1,0,0); opacity:1; }
         .scroll{ transform:matrix(1,0,0,1,0,0); opacity:1; }
@@ -109,7 +109,7 @@ h3{ font-size:2rem; color:#fff; line-height:3.5rem; font-weight:500;
 #intro{ overflow:hidden;
     .textBox{ box-sizing:border-box;
         h4{ padding:0 18px 6px 0; margin-bottom:1.5rem; font-size:1.5rem; font-weight:500; border-bottom:2px solid #FB8B00; }
-        p{font-size:1.145rem; line-height: 1.875rem;}
+        p{font-size:1.125rem; line-height: 1.75rem;}
     }
  }
  /* skills */
@@ -155,25 +155,28 @@ h3{ font-size:2rem; color:#fff; line-height:3.5rem; font-weight:500;
     .contents{ display:flex; 
         > img{ margin-right:2rem; border:1px solid #FB8B00; }
         .desc{ position:relative; display:flex; flex-direction:column;
-            h5{ margin-bottom:1rem; padding:0 0 0.5rem 0.5rem; border-bottom:3px solid #FB8B00; font-weight:600; font-size:1.5rem; color:#666; }
+            h5{ margin-bottom:1rem; padding-bottom:0.5rem; border-bottom:3px solid #FB8B00; font-weight:500; font-size:1.5rem; color:#666; }
             .descTop{
-                .goGithub{ display:block; margin-bottom:1rem;
+                .goGithub{ display:block; margin-bottom:1.125rem;
                     img{ float:left; width:2.5rem; }
-                    span{margin-left:1rem; line-height:2.5rem; font-size:1.125rem; font-weight:500; transition:0.3s; }
+                    span{margin-left:0.75rem; line-height:2.5rem; font-size:1.15rem; font-weight:500; transition:0.3s; }
                     &:hover{
                         span{ color:#FB8B00; font-size:1.25rem; }
                      }
                 }
                 .goView{ display: none; }
             }
-            p{ line-height:1.75rem; b{ font-weight:500; font-size:1.125rem; } .date_m{ display: none; } }
+            p{ font-size:1.125rem; line-height:1.875rem; b{ font-weight:500; font-size:1.125rem; } .date_m{ display: none; } }
             > .button{ position:absolute; bottom:0.5rem; @include button; }
             .buttonBox{ width:100%;
                 position:absolute; left:0; bottom:0;
                 .button{ &:last-of-type{ margin:1rem 0; } @include button; }
-                >span{ font-size:0.875rem; }
+                >span{ font-size:0.975rem; color:#666; }
             }
-            
+            .percentage{ width:fit-content;
+                margin:1rem 0; padding:0.5rem 1rem; font-weight:500; color:#FB8B00; background:linear-gradient(right, #FB8B00, #fb8a0000);
+                span{ font-size:1.125rem; font-weight:500; color: #fff;  }
+            }
         }
     }
 }
@@ -209,7 +212,7 @@ h3{ font-size:2rem; color:#fff; line-height:3.5rem; font-weight:500;
             input{ padding:0.5rem; margin-bottom:1rem; border:none; border-bottom:1px solid #ccc; &::placeholder{ color:#666; } }
             label[for="message"]{ color:#666; margin-bottom:0.5rem; padding-left:0.5rem; }
             textarea{ height:100%; padding:0.5rem; border:1px solid #ccc; }
-            button{ @include button; background:transparent; margin:1.5rem 0 1rem; }
+            button{ background:#fff; margin:1.5rem 0 1rem; @include button; }
         }
         .away{ position:absolute; left:-999em; }
     }
@@ -260,12 +263,12 @@ footer{ width:100%; background-color:#FB8B00; padding:1.5rem 0 3.5rem;
         margin-bottom:50px !important;
         figure{ 
             float:left;
-            width:50%; height:680px; margin-bottom:1.5rem; padding-right:2.5rem; box-sizing:border-box; overflow:hidden; 
+            width:50%; height:740px; margin-bottom:1.5rem; padding-right:2.5rem; box-sizing:border-box; overflow:hidden; 
             .pc{ display:block; }
             .mobile{ display: none; }
             img{ width:100%; }
         }
-        .textBox{ width:50%; height:680px; float:right; padding:45px 0; }
+        .textBox{ width:50%; height:680px; float:right; padding:1.75rem 0; }
     }
     /* skills */
     #skills{
@@ -289,7 +292,7 @@ footer{ width:100%; background-color:#FB8B00; padding:1.5rem 0 3.5rem;
     .project{
         .contents{ 
             display:flex; 
-            > img{ width:745px; }
+            > img{ width:740px; }
         }
     }
     .moreWorks{ 
@@ -483,9 +486,9 @@ footer{ width:100%; background-color:#FB8B00; padding:1.5rem 0 3.5rem;
                 li{ a{opacity:1; } }
             }
             .panel span{ 
-                &:nth-child(1){ top:-3px; transform-origin:left; transform:rotate(45deg) }
+                &:nth-child(1){ top:-4px; transform-origin:left; transform:rotate(45deg) }
                 &:nth-child(2){ opacity:0; }
-                &:nth-child(3){ top:3px; transform-origin:left; transform:rotate(-45deg)  }
+                &:nth-child(3){ top:4px; transform-origin:left; transform:rotate(-45deg)  }
             }
         }
     }
