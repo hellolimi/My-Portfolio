@@ -29,6 +29,7 @@ const viewList = () => {
         const thisView = preview[i];
         previewBtn[i].onclick = e => {
             e.preventDefault();
+            e.stopPropagation();
             thisView.classList.toggle("active");
         }
     }
@@ -50,19 +51,21 @@ window.addEventListener('resize', e => {
 
 
 /* loading & main_animation */
-const text = '안녕하세요, 신입 프론트엔드 개발자 김경림입니다!';
-const main = document.getElementById('main');
-const mainText = document.querySelector('.mainText');
+const typing = () => {
+    const text = '안녕하세요, 신입 프론트엔드 개발자 김경림입니다!';
+    const main = document.getElementById('main');
+    const mainText = document.querySelector('.mainText');
 
-let num = 0;
-let typing;
-setTimeout(()=>{
-    typing = setInterval(()=>{
-        num<text.length&&(mainText.textContent += text[num]);
-        num++;
-    }, 90);
-}, 1800);
-clearInterval(typing);
+    let num = 0;
+    let typing;
+    setTimeout(()=>{
+        typing = setInterval(()=>{
+            num<text.length&&(mainText.textContent += text[num]);
+            num++;
+        }, 90);
+    }, 1800);
+    clearInterval(typing);
+}
 
 /* window onload */
 window.onload = () => {
@@ -71,6 +74,7 @@ window.onload = () => {
         const loader = document.querySelector('.loader');
         loader.style.display = 'none';
     }, 800);
+    typing();
 };
 
 /* projects navigation */
