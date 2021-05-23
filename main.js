@@ -122,10 +122,10 @@ function sendEmail(e) {
             alert("SORRY! 메일을 보내는 데 실패하였습니다.");
         });
 
-        sender.value = '';
-        contact.value = '';
-        addr.value = '';
-        message.value = '';
+    sender.value = '';
+    contact.value = '';
+    addr.value = '';
+    message.value = '';
 }
 
 contactForm.addEventListener('submit', sendEmail);
