@@ -61,10 +61,9 @@ window.addEventListener('resize', e => {
 });
 
 
-/* loading & main_animation */
+/* main_animation */
 const typing = () => {
     const text = '안녕하세요, 신입 프론트엔드 개발자 김경림입니다!';
-    const main = document.getElementById('main');
     const mainText = document.querySelector('.mainText');
 
     let num = 0;
@@ -80,6 +79,7 @@ const typing = () => {
 
 /* window onload */
 window.onload = () => {
+    const main = document.getElementById('main');
     main.classList.add('active');
     setTimeout(()=>{
         const loader = document.querySelector('.loader');
