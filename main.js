@@ -84,7 +84,7 @@ window.onload = () => {
     setTimeout(()=>{
         const loader = document.querySelector('.loader');
         loader.style.display = 'none';
-    }, 400);
+    }, 800);
     typing();
 };
 
